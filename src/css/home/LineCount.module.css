@@ -1,0 +1,33 @@
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.head {
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: -0.03em;
+}
+
+.subHead {
+    font-size: 0.95rem;
+    color: var(--muted-text);
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-soft);
+    background: var(--surface-glass);
+    backdrop-filter: blur(12px);
+}
+
+@media screen and (max-width: 640px) {
+    .line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.9rem;
+        padding: 0 1rem 1rem;
+    }
+}

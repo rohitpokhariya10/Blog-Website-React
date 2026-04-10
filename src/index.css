@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+:root[data-theme="theme1"] {
+  --primary-color: #1f6fba;
+  --primary-strong: #114f92;
+  --secondary-color: #0d8f7a;
+  --bg-color: #f4f7fb;
+  --text-color: #0f172a;
+  --hover-color: #155a9c;
+  --bg-color-2: #e8eef6;
+  --bg-color-3: #ffffff;
+  --hover-bg: #edf4fb;
+  --hover-border: #9bbfe2;
+  --muted-text: #5b6b82;
+  --surface-card: rgba(255, 255, 255, 0.94);
+  --surface-card-soft: rgba(248, 251, 255, 0.94);
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --surface-glass-strong: rgba(255, 255, 255, 0.9);
+  --nav-bg: rgba(244, 247, 251, 0.82);
+  --border-soft: rgba(134, 156, 189, 0.28);
+  --border-strong: rgba(31, 111, 186, 0.45);
+  --tag-bg: #eef4fb;
+  --shadow-soft: 0 16px 40px rgba(22, 35, 61, 0.08);
+  --shadow-hover: 0 24px 60px rgba(22, 35, 61, 0.14);
+}
+
+:root[data-theme="theme2"] {
+  --primary-color: #5caeff;
+  --primary-strong: #2f83d8;
+  --secondary-color: #37b8a3;
+  --text-color: #edf2ff;
+  --bg-color: #07111f;
+  --bg-color-2: #101c2d;
+  --bg-color-3: #0c1626;
+  --hover-color: #4a9ff4;
+  --hover-bg: rgba(92, 174, 255, 0.12);
+  --hover-border: rgba(92, 174, 255, 0.25);
+  --muted-text: #99a9c2;
+  --surface-card: rgba(13, 23, 39, 0.95);
+  --surface-card-soft: rgba(10, 20, 34, 0.95);
+  --surface-glass: rgba(13, 23, 39, 0.72);
+  --surface-glass-strong: rgba(13, 23, 39, 0.9);
+  --nav-bg: rgba(7, 17, 31, 0.82);
+  --border-soft: rgba(118, 150, 194, 0.2);
+  --border-strong: rgba(92, 174, 255, 0.38);
+  --tag-bg: rgba(92, 174, 255, 0.12);
+  --shadow-soft: 0 18px 44px rgba(0, 0, 0, 0.28);
+  --shadow-hover: 0 26px 64px rgba(0, 0, 0, 0.38);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Geist", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at top, rgba(31, 111, 186, 0.1), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(13, 143, 122, 0.08), transparent 24%);
+  background-attachment: fixed;
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.page {
+  max-width: 1160px;
+  margin: auto;
+  padding-bottom: 3rem;
+}

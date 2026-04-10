@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.left {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.head {
+    font-size: 2rem;
+}
+
+.subHead {
+    font-size: 1rem;
+    color: #555555;
+}
+
+.newBtn {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 0.75rem 1.25rem;
+}
+
+.newBtn:hover {
+    background: var(--hover-color);
+}
+
+@media screen and (max-width: 640px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .newBtn {
+        width: 100%;
+    }
+}

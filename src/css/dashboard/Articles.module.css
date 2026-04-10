@@ -1,0 +1,59 @@
+.mainDiv {
+    padding: 1rem;
+}
+
+.head {
+    color: var(--text-color);
+}
+
+.noArticles {
+    background: var(--bg-color-3);
+    border: 1px solid #555555;
+    border-radius: 10px;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    color: #555555;
+    min-height: 320px;
+}
+
+.icon {
+    font-size: 5rem;
+}
+
+.headTxt {
+    font-size: 1.75rem;
+    color: var(--text-color);
+}
+
+.subTxt {
+    font-size: 1rem;
+}
+
+.button {
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--hover-color);
+}
+
+@media screen and (max-width: 640px) {
+    .noArticles {
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}

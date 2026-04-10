@@ -1,0 +1,36 @@
+.countHead {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.box {
+    background: var(--bg-color-3);
+    padding: 1rem;
+    color: #555555;
+    border: 1px solid #555555;
+    border-radius: 10px;
+}
+
+.count {
+    font-size: 2.5rem;
+}
+
+.normal {
+    color: var(--text-color);
+}
+
+.bright {
+    color: #00a63e;
+}
+
+.dim {
+    color: #8f8f8f;
+}
+
+@media screen and (max-width: 640px) {
+    .countHead {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

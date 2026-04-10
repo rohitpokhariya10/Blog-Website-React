@@ -1,0 +1,146 @@
+.wrap {
+    min-height: calc(100vh - 4rem);
+}
+
+.page {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    color: var(--text-color);
+}
+
+.back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555555;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-bottom: 2rem;
+}
+
+.back:hover {
+    color: var(--text-color);
+}
+
+.article {
+    background: var(--bg-color-3);
+    border: 1px solid #555555;
+    border-radius: 10px;
+    padding: 1.25rem;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: var(--bg-color-2);
+    color: var(--text-color);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.2rem 0.55rem;
+}
+
+.title {
+    font-size: clamp(1.9rem, 4vw, 2.3rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.desc {
+    color: #555555;
+    margin-top: 0.75rem;
+    line-height: 1.6;
+}
+
+.meta {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    color: #555555;
+    font-size: 0.9rem;
+}
+
+.metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.content {
+    line-height: 1.75;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+    margin: 1.25rem 0 0.5rem;
+    color: var(--text-color);
+}
+
+.content p,
+.content li {
+    color: var(--text-color);
+    margin: 0.65rem 0;
+}
+
+.content ul,
+.content ol {
+    padding-left: 1.2rem;
+}
+
+.content pre {
+    background: var(--bg-color-2);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    overflow-x: auto;
+    margin: 0.8rem 0;
+}
+
+.content code {
+    background: var(--bg-color-2);
+    border-radius: 5px;
+    padding: 0.15rem 0.4rem;
+}
+
+.notFound {
+    background: var(--bg-color-3);
+    border: 1px solid #555555;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.backBtn {
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.2rem;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.backBtn:hover {
+    background: var(--hover-color);
+}

@@ -1,0 +1,321 @@
+.nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-soft);
+    background: var(--nav-bg);
+    backdrop-filter: blur(18px);
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1160px, 100%);
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.brandName {
+    font-size: 1.65rem;
+    font-weight: 750;
+    color: var(--text-color);
+    letter-spacing: -0.03em;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.themeSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid var(--border-soft);
+    background: var(--surface-glass);
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.themeSwitch:hover {
+    transform: translateY(-1px);
+    border-color: var(--border-strong);
+}
+
+.themeBtn {
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.login {
+    background: transparent;
+    color: var(--text-color);
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.login:hover {
+    background: var(--surface-glass);
+    border-color: var(--border-soft);
+}
+
+.register {
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-strong));
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 1.15rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 14px 30px rgba(9, 61, 125, 0.24);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.register:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 36px rgba(9, 61, 125, 0.28);
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    z-index: 999;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.line {
+    background: var(--text-color);
+    display: inline-block;
+    height: 3px;
+    width: 24px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nameFirst {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-strong));
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 24px rgba(9, 61, 125, 0.22);
+}
+
+.Ful {
+    color: var(--text-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.menu.user {
+    padding: 0.45rem 0.65rem 0.45rem 0.45rem;
+    border-radius: 18px;
+    border: 1px solid var(--border-soft);
+    background: var(--surface-glass);
+    gap: 0.8rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.menu.user:hover {
+    background: var(--surface-glass-strong);
+}
+
+.buttons.menu.user {
+    position: relative;
+    cursor: pointer;
+}
+
+.minMenu {
+    display: none;
+}
+
+.minMenu.active {
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    background: var(--surface-card);
+    padding: 1rem;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--shadow-hover);
+}
+
+.usrName,
+.usrEmail,
+.usrType {
+    color: var(--text-color);
+    margin: 3px 0;
+}
+
+.usrEmail,
+.usrType {
+    color: var(--muted-text);
+}
+
+.btnss {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.home,
+.dash,
+.logOut {
+    width: 100%;
+    text-align: left;
+    font-size: 0.98rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    padding: 0.8rem 0.9rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.logOut:hover,
+.home:hover,
+.dash:hover {
+    background: var(--hover-bg);
+}
+
+@media screen and (max-width: 680px) {
+    .menu.user {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .menu.noUser {
+        position: fixed;
+        top: 74px;
+        right: -100%;
+        height: calc(100vh - 74px);
+        background: var(--bg-color);
+        width: min(320px, 100vw);
+        z-index: 99;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow-hover);
+        border-left: 1px solid var(--border-soft);
+        padding: 1.5rem;
+    }
+
+    .menu.active.noUser {
+        right: 0;
+    }
+
+    .buttons {
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .login,
+    .register {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .hamburger.noUser {
+        display: flex;
+    }
+
+    .hamburger.user {
+        display: none;
+    }
+
+    .themeBtn {
+        font-size: 1.05rem;
+    }
+
+    .details {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nameFirst {
+        font-size: 0.75rem;
+    }
+
+    .Ful {
+        font-size: 0.75rem;
+    }
+
+    .menu.user {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .nav {
+        padding: 0.85rem 0.9rem;
+    }
+
+    .details {
+        gap: 0.25rem;
+    }
+
+    .brandName {
+        font-size: 1.4rem;
+    }
+}
