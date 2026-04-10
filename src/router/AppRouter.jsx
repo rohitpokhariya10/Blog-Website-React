@@ -1,6 +1,6 @@
-import React, { Suspense, lazy } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router';
-import Blog from '../pages/Blog';
+import React, { Suspense, lazy } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Blog from "../pages/Blog";
 
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 const Home = lazy(() => import("../pages/Home"));
@@ -10,64 +10,69 @@ const Dashboard = lazy(() => import("../pages/Dashboard"));
 const NewDashboard = lazy(() => import("../pages/NewDashboard"));
 const DashboardLayout = lazy(() => import("../layout/DashboardLayout"));
 
-// import MainLayout from '../layout/MainLayout';
-// import Home from '../pages/Home';
-// import Login from '../pages/Login';
-// import Rgister from '../pages/Rgister';
-// import Dashboard from '../pages/Dashboard';
-// import DashboardLayout from '../layout/DashboardLayout';
-// import NewDashboard from '../pages/NewDashboard';
-
 const AppRouter = () => {
-
-    const router = createBrowserRouter([
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
         {
-            path: "/",
-            element: <MainLayout />,
-            children: [
-                {
-                    path: "",
-                    element: <Home />
-                },
-                {
-                    path: "login",
-                    element: <Login />
-                },
-                {
-                    path: "register",
-                    element: <Register />
-                },
-                {
-                    path: "dashboard",
-                    element: <DashboardLayout />,
-                    children: [
-                        {
-                            path: "",
-                            element: <Dashboard />
-                        },
-                        {
-                            path: "new",
-                            element: <NewDashboard />
-                        },
-                        {
-                            path: "edit/:id",
-                            element: <NewDashboard />
-                        }
-                    ]
-                },
-                {
-                    path: "blog/:id",
-                    element: <Blog />
-                }
-            ]
+          path: "",
+          element: <Home />,
         },
-    ])
+        {
+          path: "login",
+          element: <Login />,
+        },
+        {
+          path: "register",
+          element: <Register />,
+        },
+        {
+          path: "dashboard",
+          element: <DashboardLayout />,
+          children: [
+            {
+              path: "",
+              element: <Dashboard />,
+            },
+            {
+              path: "new",
+              element: <NewDashboard />,
+            },
+            {
+              path: "edit/:id",
+              element: <NewDashboard />,
+            },
+          ],
+        },
+        {
+          path: "blog/:id",
+          element: <Blog />,
+        },
+      ],
+    },
+  ]);
 
-    return (
-        <Suspense fallback={<h1>Loading...</h1>}>
-            <RouterProvider router={router} />
-        </Suspense>
-    )
-}
+  return (
+    <Suspense
+      fallback={
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h1>Loading...</h1>
+        </div>
+      }
+    >
+      <RouterProvider router={router} />
+    </Suspense>
+  );
+};
 
-export default AppRouter
+export default AppRouter;

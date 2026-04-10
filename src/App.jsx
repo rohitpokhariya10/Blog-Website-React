@@ -6,13 +6,15 @@ import { ArticleProvider } from './context/ArticleContext';
 
 const App = () => {
   return (
-    <ArticleProvider>
+    <div className='h-[100%] w-[100%] flex items-center justify-center'>
+      <ArticleProvider>
       <AuthProvider>
         <ThemeProvider>
           <AppRouter />
         </ThemeProvider>
       </AuthProvider>
     </ArticleProvider>
+    </div>
 
   );
 }
